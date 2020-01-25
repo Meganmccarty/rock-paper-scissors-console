@@ -1,3 +1,6 @@
+/*let player = 0;
+let computer = 0;*/
+
 function computerPlay() {
     let selection = Math.floor(Math.random() * Math.floor(3));
     if (selection == 0) {
@@ -30,6 +33,7 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
-const playerSelection = "rock";
-const computerSelection = computerPlay()
-console.log(playRound(playerSelection, computerSelection));
+let playerInput = prompt("Enter your selection (rock, paper, or scissors)");
+let playerChoice = playerInput.toLowerCase();
+let result = playRound(playerChoice, computerPlay());
+alert(result);
