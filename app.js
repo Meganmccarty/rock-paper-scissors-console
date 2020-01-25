@@ -49,3 +49,11 @@ function game() {
 for(i = 0; i<5; i++) {
     game();
 }
+
+if (player > computer) {
+    alert("You won the game against the computer! Refresh the page to play again!");
+} else if (computer > player) {
+    alert("You lost the game against the computer! Refresh the page to play again!");
+} else {
+    alert("The game is a draw! Refresh the page to play again!");
+}
