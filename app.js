@@ -39,7 +39,13 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
-let playerInput = prompt("Enter your selection (rock, paper, or scissors)");
-let playerChoice = playerInput.toLowerCase();
-let result = playRound(playerChoice, computerPlay()) + " Player: " + player + " Computer: " + computer;
-alert(result);
+function game() {
+    let playerInput = prompt("Enter your selection (rock, paper, or scissors)");
+    let playerChoice = playerInput.toLowerCase();
+    let result = playRound(playerChoice, computerPlay()) + " Player: " + player + " Computer: " + computer;
+    alert(result);
+}
+
+for(i = 0; i<5; i++) {
+    game();
+}
