@@ -1,6 +1,8 @@
+/* Variables to hold the scores */
 let player = 0;
 let computer = 0;
 
+/* Function to get computer's choice (rock, paper, scissors) */
 function computerPlay() {
     let selection = Math.floor(Math.random() * Math.floor(3));
     if (selection == 0) {
@@ -11,6 +13,7 @@ function computerPlay() {
         return "scissors";
 }
 
+/* Function to play a round of rock, paper, scissors */
 function playRound(playerSelection, computerSelection) {
     if (playerSelection == "rock" && computerSelection == "rock") {
         return "It's a tie! You both chose rock!";
@@ -38,18 +41,18 @@ function playRound(playerSelection, computerSelection) {
         return "It's a tie! You both chose scissors!";
     }
 }
-
+/* Function to gather player's choice, initiate round of game, and display results */
 function game() {
     let playerInput = prompt("Enter your selection (rock, paper, or scissors)");
     let playerChoice = playerInput.toLowerCase();
     let result = playRound(playerChoice, computerPlay()) + " Player: " + player + " Computer: " + computer;
     alert(result);
 }
-
+/* Loop to play 5 rounds of game before displaying final results */
 for(i = 0; i<5; i++) {
     game();
 }
-
+/* Conditional to display final game results after playing 5 rounds */
 if (player > computer) {
     alert("You won the game against the computer! Refresh the page to play again!");
 } else if (computer > player) {
